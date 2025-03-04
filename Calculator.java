@@ -2,27 +2,28 @@ package Calculator_project.prac;
 
 import java.util.Scanner;
 
-public class Sample4 {
+public class Calculator {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int num1, num2, num3 = 1;
         String input;
 
         while (true) {
-
             System.out.println("첫 번째 수를 입력해 주세요.");
             while (!scanner.hasNextInt()) {
                 System.out.println("정수를 입력해주세요.");
-                scanner.nextLine();
+                scanner.next();
             }
             num1 = scanner.nextInt();
+            scanner.nextLine();
 
             System.out.println("두 번째 수를 입력해 주세요.");
             while (!scanner.hasNextInt()) {
                 System.out.println("정수를 입력해주세요.");
-                scanner.nextLine();
+                scanner.next();
             }
             num2 = scanner.nextInt();
+            scanner.nextLine();
 
             System.out.println("1: 더하기  2: 빼기  3: 곱하기  4: 나누기.");
             while (true) {
@@ -56,7 +57,7 @@ public class Sample4 {
             System.out.println("종료하려면 'exit'을, 다시 시작하려면 아무 버튼을 입력하세요.");
             input = scanner.nextLine();
             scanner.nextLine();
-            if (input.equalsIgnoreCase("exit")){
+            if (input.equalsIgnoreCase("exit")) {
                 System.out.println("계산기를 종료합니다.");
 
                 break;
@@ -64,6 +65,5 @@ public class Sample4 {
             System.out.println("계산기를 다시 시작합니다.");
 
         }
-
     }
 }
