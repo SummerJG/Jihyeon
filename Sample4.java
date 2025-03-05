@@ -2,13 +2,12 @@ package Calculator_project.prac;
 
 import java.util.Scanner;
 
-public class Calculator {
+public class Sample4 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int num1, num2, num3 = 1;
         String input;
 
-        outer:
         while (true) {
             System.out.println("첫 번째 수를 입력해 주세요.");
             while (!scanner.hasNextInt()) {
@@ -42,10 +41,8 @@ public class Calculator {
             while (num3 == 4 && num2 == 0) {
                 System.out.println("0으로 나눌 수 없습니다");
                 scanner.nextLine();
-                System.out.println("계산기를 다시 시작해 주세요");
-                continue outer;
             }
-
+//switch를 사용해보기
             if (num3 == 1) {
                 System.out.println(num1 + num2);
             } else if (num3 == 2) {
@@ -60,7 +57,7 @@ public class Calculator {
             System.out.println("종료하려면 'exit'을, 다시 시작하려면 아무 버튼을 입력하세요.");
             input = scanner.nextLine();
             scanner.nextLine();
-            if (input.equalsIgnoreCase("exit")) {
+            if (input.equalsIgnoreCase("exit")){
                 System.out.println("계산기를 종료합니다.");
 
                 break;
